@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Authentic Commercial Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Authentic Commercial Services">
+            </a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu">
+                <ul class="main-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="our-values.html">Our Values</a></li>
+                    <li class="has-submenu">
+                        <a href="industries-services.html">Industries & Services <i class="fas fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="has-submenu">
+                                <a href="commercial.html">Commercial <i class="fas fa-angle-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="retail.html">Retail</a></li>
+                                    <li><a href="government.html">Government</a></li>
+                                    <li><a href="education-childcare.html">Education & Childcare</a></li>
+                                    <li><a href="commercial-property.html">Commercial Property</a></li>
+                                    <li><a href="residential-strata.html">Residential Strata</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="hospitality.html">Hospitality <i class="fas fa-angle-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="hotels.html">Hotels</a></li>
+                                    <li><a href="clubs-pubs-restaurants.html">Clubs, Pubs & Restaurants</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="food-manufacturing-production.html">Food Manufacturing & Production <i class="fas fa-angle-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="airline-catering.html">Airline Catering</a></li>
+                                    <li><a href="food-beverage-production-processing.html">Food Manufacturing & Processing</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="health-aged-care.html">Health & Aged Care <i class="fas fa-angle-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="nursing-home.html">Nursing Homes</a></li>
+                                    <li><a href="residential-aged-care-facilities.html">Residential Aged Care Facilities</a></li>
+                                    <li><a href="hospitals.html">Hospitals</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="compliance.html">Compliance</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Ready to transform your business? Get in touch with our team of experts and discover how we can help you achieve your goals.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="contactForm" class="modern-form" onsubmit="return handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="commercial">Commercial Cleaning</option>
+                                <option value="hospitality">Hospitality Services</option>
+                                <option value="healthcare">Healthcare Cleaning</option>
+                                <option value="food">Food Industry Services</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project and requirements..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-section">
+                        <h2>Get in Touch</h2>
+                        
+                        <div class="contact-category">
+                            <h3>General Inquiries</h3>
+                            <p><i class="far fa-envelope"></i> <a href="mailto:admin@authenticcs.com.au">admin@authenticcs.com.au</a></p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                        </div>
+
+                        <div class="contact-category">
+                            <h3>Business Development</h3>
+                            <p><i class="far fa-envelope"></i> <a href="mailto:eddy@authenticcs.com.au">eddy@authenticcs.com.au</a></p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                        </div>
+
+                        <div class="contact-category">
+                            <h3>Support</h3>
+                            <p><i class="far fa-envelope"></i> <a href="mailto:support@authenticcs.com.au">support@authenticcs.com.au</a></p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h2>Our Offices</h2>
+                        
+                        <div class="office-locations">
+                            <div class="office">
+                                <h3>Sydney</h3>
+                                <p><a href="https://maps.google.com/?q=1014+Uhrig+rd,Lidcombe,+Sydney,+NSW+2141" target="_blank">
+                                    1014 Uhrig rd<br>
+                                    Lidcombe, Sydney, NSW 2141
+                                </a></p>
+                                <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                            </div>
+
+                            <!-- <div class="office">
+                                <h3>Melbourne</h3>
+                                <p><a href="https://maps.google.com/?q=1014+Uhrig+rd,Lidcombe,+Sydney,+NSW+2141" target="_blank">
+                                    1014 Uhrig rd<br>
+                                    Lidcombe, Sydney, NSW 2141
+                                </a></p>
+                                <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                            </div>
+
+                            <div class="office">
+                                <h3>Brisbane</h3>
+                                <p><a href="https://maps.google.com/?q=1014+Uhrig+rd,Lidcombe,+Sydney,+NSW+2141" target="_blank">
+                                    1014 Uhrig rd<br>
+                                    Lidcombe, Sydney, NSW 2141
+                                </a></p>
+                                <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Visit Our Headquarters</h2>
+            <p>Located in the heart of the business district, we're easily accessible by public transport.</p>
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Visit Us At:</p>
+                    <p><a href="https://maps.google.com/?q=1014+Uhrig+rd,Lidcombe,+Sydney,+NSW+2141" target="_blank">
+                        1014 Uhrig rd, Lidcombe<br>
+                        Sydney, NSW 2141
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Prefer to Talk Directly?</h2>
+            <p>Schedule a call with one of our experts to discuss your project requirements in detail.</p>
+            <a href="#" class="btn btn-light">Schedule a Call</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo.png" alt="Authentic Commercial Services" class="footer-logo">
+                    <p>Delivering authentic and reliable commercial services with integrity and excellence.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="commercial.html">Commercial Services</a></li>
+                        <li><a href="hospitality.html">Hospitality Services</a></li>
+                        <li><a href="food-manufacturing-production.html">Food Manufacturing</a></li>
+                        <li><a href="health-aged-care.html">Healthcare Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="our-values.html">Our Values</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="news.html">News & Insights</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=1014+Uhrig+rd,Lidcombe,+Sydney,+NSW+2141" target="_blank">1014 Uhrig rd, Lidcombe, Sydney, NSW 2141</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+61497074284">+61-497074284</a></p>
+                    <p><i class="far fa-envelope"></i> <a href="mailto:admin@authenticcs.com.au">admin@authenticcs.com.au</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Authentic Commercial Services. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Construct email body
+            const emailBody = `
+Name: ${name}
+Email: ${email}
+Company: ${company}
+Phone: ${phone}
+Service Interest: ${service}
+
+Message:
+${message}
+            `.trim();
+
+            // Construct mailto URL
+            const mailtoUrl = `mailto:admin@authenticcs.com.au?subject=New Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+
+            // Open default email client
+            window.location.href = mailtoUrl;
+
+            return false;
+        }
+    </script>
+</body>
+</html> 
