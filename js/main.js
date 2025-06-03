@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const testimonials = [
         {
-            text: "TechCorp transformed our operations completely. Their expertise and dedication to our success has been remarkable.",
+            text: "ACS transformed our operations completely. Their expertise and dedication to our success has been remarkable.",
             author: "Sarah Johnson",
             position: "CEO, Innovation Labs",
             company: "Innovation Labs",
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "assets/images/client2.jpg"
         },
         {
-            text: "Working with TechCorp has been a game-changer. Their solutions are innovative, reliable, and perfectly tailored to our needs.",
+            text: "Working with Authentic Commercial Services has been a game-changer. Their solutions are innovative, reliable, and perfectly tailored to our needs.",
             author: "Emily Rodriguez",
             position: "Director of Operations, Global Corp",
             company: "Global Corp",
