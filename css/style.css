@@ -401,6 +401,24 @@ img {
     gap: 20px;
 }
 
+.designer-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.designer-credit span {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.designer-credit .adg-logo {
+    height: 40px;
+    width: 100px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {

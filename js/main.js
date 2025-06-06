@@ -1,28 +1,6 @@
 // Testimonials Carousel
 document.addEventListener('DOMContentLoaded', function() {
-    const testimonials = [
-        {
-            text: "ACS transformed our operations completely. Their expertise and dedication to our success has been remarkable.",
-            author: "Sarah Johnson",
-            position: "CEO, Innovation Labs",
-            company: "Innovation Labs",
-            image: "assets/images/client1.jpg"
-        },
-        {
-            text: "The level of professionalism and technical expertise exceeded our expectations. Highly recommended for any business transformation.",
-            author: "Michael Chen",
-            position: "CTO, Future Systems",
-            company: "Future Systems",
-            image: "assets/images/client2.jpg"
-        },
-        {
-            text: "Working with Authentic Commercial Services has been a game-changer. Their solutions are innovative, reliable, and perfectly tailored to our needs.",
-            author: "Emily Rodriguez",
-            position: "Director of Operations, Global Corp",
-            company: "Global Corp",
-            image: "assets/images/client3.jpg"
-        }
-    ];
+    
 
     let currentSlide = 0;
     const carousel = document.querySelector('.testimonials-carousel');

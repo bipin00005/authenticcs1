@@ -30,6 +30,17 @@
     margin-right: 10px;
 }
 
+.logo .tagline {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.logo .tagline .bold-text {
+    font-weight: 700;
+}
+
 .footer-logo {
     height: 80px;
     width: auto;
@@ -41,6 +52,7 @@
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .menu-toggle span {
@@ -72,6 +84,21 @@
 
 .main-menu a:hover {
     color: var(--primary-color);
+}
+
+/* Submenu Toggle Button */
+.submenu-toggle {
+    background: none;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.has-submenu.active > a .submenu-toggle i {
+    transform: rotate(180deg);
 }
 
 /* Submenu Styles */
@@ -125,10 +152,10 @@
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 90px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 90px);
         background-color: var(--white);
         padding: 20px;
         overflow-y: auto;
@@ -136,6 +163,7 @@
         visibility: hidden;
         transform: translateX(-100%);
         transition: var(--transition);
+        z-index: 1000;
     }
 
     .nav-menu.active {
@@ -146,25 +174,43 @@
 
     .main-menu {
         flex-direction: column;
-        gap: 15px;
+        gap: 0;
+    }
+
+    .main-menu a {
+        padding: 15px;
+        border-radius: 5px;
+        justify-content: space-between;
     }
 
     .submenu {
         position: static;
+        width: 100%;
         opacity: 1;
         visibility: visible;
         transform: none;
         box-shadow: none;
-        padding-left: 20px;
-        display: none;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        margin-left: 20px;
     }
 
     .has-submenu.active > .submenu {
-        display: block;
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
     }
 
     .submenu a {
-        padding: 10px 0;
+        padding: 12px 15px;
+    }
+
+    /* Nested Submenu Styles */
+    .submenu .submenu {
+        margin-left: 20px;
+        border-left: 2px solid var(--light-gray);
+        padding-left: 10px;
     }
 
     .menu-toggle.active span:nth-child(1) {

@@ -5,55 +5,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle mobile menu
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
     }
 
-    // Handle submenu toggles on mobile
+    // Handle submenu toggles
     hasSubmenuItems.forEach(item => {
         const link = item.querySelector('a');
-        const submenu = item.querySelector('.submenu');
-
-        // Create toggle button for mobile
+        
+        // Create toggle button
         const toggleBtn = document.createElement('button');
         toggleBtn.className = 'submenu-toggle';
         toggleBtn.innerHTML = '<i class="fas fa-angle-down"></i>';
         link.appendChild(toggleBtn);
 
-        // Toggle submenu on click (mobile only)
+        // Toggle submenu on mobile
         toggleBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            
+            if (window.innerWidth <= 1024) {
+                item.classList.toggle('active');
+            }
+        });
 
-            // Close other open submenus
-            hasSubmenuItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-
-            item.classList.toggle('active');
+        // Prevent link click on mobile if has submenu
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024 && item.querySelector('.submenu')) {
+                e.preventDefault();
+            }
         });
     });
 
-    // Close mobile menu when clicking outside
+    // Close menu when clicking outside
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            hasSubmenuItems.forEach(item => item.classList.remove('active'));
         }
     });
 
     // Handle window resize
-    let windowWidth = window.innerWidth;
     window.addEventListener('resize', function() {
-        if (window.innerWidth !== windowWidth) {
-            windowWidth = window.innerWidth;
-            
-            // Reset mobile menu state on window resize
+        if (window.innerWidth > 1024) {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
             hasSubmenuItems.forEach(item => item.classList.remove('active'));
